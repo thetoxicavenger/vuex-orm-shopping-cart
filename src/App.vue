@@ -8,6 +8,19 @@
   </div>
 </template>
 
+<script lang="ts">
+import Vue from 'vue'
+import store from '@/store/index'
+import data from '@/data'
+export default Vue.extend({
+  store,
+  created () {
+    this.$store.dispatch('entities/items/create', { data })
+  }
+})
+</script>
+
+
 <style lang="scss">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
